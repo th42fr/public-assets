@@ -4,6 +4,28 @@ Assets publics de **TH42** : logo et ses déclinaisons, favicons, palette de mar
 Ce dépôt est la source de vérité. Tout support — site, signature, réseaux, impression —
 consomme ces fichiers plutôt que d'en garder une copie.
 
+## Aperçu
+
+Chaque vignette porte son propre fond : ce README s'affiche en thème clair ou sombre selon
+le lecteur, et un logo transparent y disparaîtrait à moitié.
+
+| | | |
+|:--:|:--:|:--:|
+| <img src="docs/previews/logo.png" width="330"> | <img src="docs/previews/logo-dark.png" width="330"> | <img src="docs/previews/logo-auto.png" width="330"> |
+| **`brand/logo/th42-logo.svg`**<br>La référence, fond clair | **`brand/logo/th42-logo-dark.svg`**<br>Fond sombre, « TH » en `#EDEDED` | **`brand/logo/th42-logo-auto.svg`**<br>Un seul fichier, bascule seul selon le thème |
+| <img src="docs/previews/logo-black.png" width="330"> | <img src="docs/previews/logo-white.png" width="330"> | <img src="docs/previews/mark.png" width="330"> |
+| **`brand/logo/th42-logo-black.svg`**<br>Monochrome noir — impression N&B | **`brand/logo/th42-logo-white.svg`**<br>Monochrome blanc — slide sombre, photo | **`brand/logo/th42-mark.svg`**<br>Marque carrée — avatar, icône |
+| <img src="docs/previews/tampon.png" width="330"> | | |
+| **`brand/tampon/th42-tampon.svg`**<br>Une seule encre, pour tampon encreur | | |
+
+### Favicons et icônes d'application
+
+<img src="docs/previews/favicons.png" width="900">
+
+À 32 et 48 px le logo reste lisible ; **à 16 px c'est une tache**, c'est assumé. Les
+versions `maskable` sont volontairement plus petites dans leur carré parce qu'Android
+recadre en cercle ou en squircle.
+
 ## Que prendre, selon le besoin
 
 | Besoin | Fichier |
@@ -22,6 +44,14 @@ consomme ces fichiers plutôt que d'en garder une copie.
 Le mode d'emploi détaillé est dans [`docs/integration-web.md`](docs/integration-web.md).
 Les règles de la marque — couleurs, sens du dégradé, ce qu'on ne fait pas — sont dans
 [`docs/charte.md`](docs/charte.md).
+
+## Palette
+
+<img src="docs/previews/palette.png" width="900">
+
+Valeurs machine dans [`brand/tokens/`](brand/tokens/) — CSS, SCSS et JSON.
+Le dégradé du « 42 » est vertical, foncé en bas, clair en haut, et son sens ne s'inverse
+jamais : voir [`docs/charte.md`](docs/charte.md).
 
 ## Servir ces fichiers
 
