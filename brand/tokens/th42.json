@@ -1,0 +1,12 @@
+{
+  "noir": { "value": "#000000", "usage": "le « TH » sur fond clair" },
+  "blanc": { "value": "#ededed", "usage": "le « TH » sur fond sombre ; blanc cassé volontaire" },
+  "orangeBas": { "value": "#e17a00", "usage": "bas du dégradé du « 42 »" },
+  "orangeHaut": { "value": "#ffe434", "usage": "haut du dégradé du « 42 »" },
+  "orange": { "value": "#f7ad00", "usage": "aplat de référence quand un dégradé est impossible" },
+  "orangeTexte": { "value": "#ad5200", "usage": "texte sur fond blanc — 5,27:1, WCAG AA" },
+  "degrade": {
+    "value": "linear-gradient(0deg, #e17a00 0%, #ffe434 100%)",
+    "usage": "vertical, foncé en bas ; le sens ne s'inverse jamais"
+  }
+}

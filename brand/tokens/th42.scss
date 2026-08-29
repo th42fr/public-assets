@@ -1,0 +1,10 @@
+// Palette de marque TH42 — source de vérité.
+$th42-noir: #000000;
+$th42-blanc: #ededed;
+
+$th42-orange-bas: #e17a00;
+$th42-orange-haut: #ffe434;
+$th42-degrade: linear-gradient(0deg, $th42-orange-bas 0%, $th42-orange-haut 100%);
+
+$th42-orange: #f7ad00;        // aplat de référence
+$th42-orange-texte: #ad5200;  // seul orange utilisable pour du texte sur blanc
