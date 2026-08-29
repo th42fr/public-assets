@@ -1,7 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1006.11 1006.11" width="1006.11" height="1006.11" role="img" aria-label="TH42">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="7.50 7.50 905.50 535.00" width="905.50" height="535.00" role="img" aria-label="TH42">
+  <style>
+    .th42-lettres { fill: #000000; }
+    @media (prefers-color-scheme: dark) {
+      .th42-lettres { fill: #EDEDED; }
+    }
+  </style>
 <defs><linearGradient id="g42" gradientUnits="userSpaceOnUse" x1="6810.00" y1="3660.00" x2="6810.00" y2="90.00"><stop stop-color="#FFE434"/><stop offset="1" stop-color="#E17A00"/></linearGradient></defs>
-  <g transform="translate(42.81 228.06)">
-<g fill="#000000"><g transform="translate(0.000000,534.000000) scale(0.100000,-0.100000)"><path d="M82 4858 l3 -403 565 -5 566 -5 -93 -405 c-51 -223 -147 -646 -214
+<g class="th42-lettres"><g transform="translate(0.000000,534.000000) scale(0.100000,-0.100000)"><path d="M82 4858 l3 -403 565 -5 566 -5 -93 -405 c-51 -223 -147 -646 -214
 -940 -66 -294 -129 -571 -139 -615 -27 -116 -238 -1044 -261 -1150 -11 -49
 -22 -98 -25 -107 -5 -17 21 -18 440 -18 l445 0 10 38 c6 20 44 186 86 367 41
 182 82 357 90 390 8 33 32 141 55 240 22 99 49 218 60 265 61 264 413 1802
@@ -33,5 +38,4 @@ l-411 -407 -87 -349 c-47 -191 -86 -351 -86 -355 0 -5 443 -8 985 -8 l984 0
 104 283 287 684 648 1013 1007 1156 1264 114 205 151 345 152 566 1 138 -2
 171 -22 238 -28 99 -78 197 -133 266 -59 72 -180 161 -270 199 -147 61 -412
 94 -579 72z"/></g></g>
-  </g>
 </svg>

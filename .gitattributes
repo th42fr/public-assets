@@ -1,0 +1,11 @@
+# Normalisation des fins de ligne : LF dans le depot, quelle que soit la machine.
+* text=auto eol=lf
+
+# Binaires : jamais de conversion.
+*.png binary
+*.ico binary
+*.jpg binary
+*.webp binary
+
+# Le SVG est du texte, mais on le garde en LF strict.
+*.svg text eol=lf

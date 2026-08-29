@@ -1,0 +1,23 @@
+/* Palette de marque TH42 — source de vérité.
+   Générée à la main, à ne pas dériver d'un export. */
+:root {
+  /* Le « TH » : noir pur sur fond clair, blanc cassé sur fond sombre.
+     Le blanc pur halote sur fond sombre, on ne l'utilise pas. */
+  --th42-noir: #000000;
+  --th42-blanc: #ededed;
+
+  /* Le « 42 » : dégradé vertical, foncé en bas, clair en haut.
+     Le sens ne s'inverse jamais — voir docs/charte.md. */
+  --th42-orange-bas: #e17a00;
+  --th42-orange-haut: #ffe434;
+  --th42-degrade: linear-gradient(0deg, #e17a00 0%, #ffe434 100%);
+
+  /* Aplat de référence, quand un dégradé est impossible (tampon couleur,
+     bordure, puce). Médiane du dégradé calculée en oklch. */
+  --th42-orange: #f7ad00;
+
+  /* Orange assombri, seul utilisable pour du TEXTE sur fond blanc :
+     5,27:1 de contraste, conforme WCAG AA. Les trois valeurs ci-dessus
+     sont en dessous de 2:1 et ne doivent jamais porter du texte. */
+  --th42-orange-texte: #ad5200;
+}
