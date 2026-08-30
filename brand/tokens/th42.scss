@@ -1,4 +1,5 @@
 // Palette de marque TH42 — source de vérité.
+// Contrastes mesurés (WCAG 2.1) : voir th42.json pour les chiffres.
 $th42-noir: #000000;
 $th42-blanc: #ededed;
 
@@ -7,4 +8,18 @@ $th42-orange-haut: #ffe434;
 $th42-degrade: linear-gradient(0deg, $th42-orange-bas 0%, $th42-orange-haut 100%);
 
 $th42-orange: #f7ad00;        // aplat de référence
-$th42-orange-texte: #ad5200;  // seul orange utilisable pour du texte sur blanc
+$th42-orange-texte: #ad5200;  // seul orange utilisable pour du texte sur fond clair
+
+// Fond sombre — référence #121212, plage admise : neutres #000000 à #1a1a1a.
+// Sur sombre, l'orange texte est l'aplat (9,75:1) ; $th42-orange-texte échoue (3,55:1).
+$th42-fond-sombre: #121212;
+$th42-orange-texte-sombre: #f7ad00;
+$th42-attention-fond-sombre: #312300;  // color-mix(#f7ad00, black 80%)
+$th42-attention-texte-sombre: #f7ad00; // 7,97:1 sur le fond attention
+
+// Gamme d'ambiance — fonds et décor uniquement, jamais de texte dans ces couleurs.
+// Règle : color-mix(in srgb, #f7ad00, white P%), P entre 35 % et 75 %.
+// Dégradés : 2 stops max dans la gamme, angle libre sauf vertical foncé-en-bas.
+$th42-ambiance-fonce: #faca59;  // borne P = 35 %
+$th42-ambiance-median: #fbda8c; // P = 55 %
+$th42-ambiance-clair: #fdeabf;  // borne P = 75 %

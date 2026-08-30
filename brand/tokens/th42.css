@@ -1,5 +1,6 @@
 /* Palette de marque TH42 — source de vérité.
-   Générée à la main, à ne pas dériver d'un export. */
+   Générée à la main, à ne pas dériver d'un export.
+   Contrastes mesurés (WCAG 2.1) : voir th42.json pour les chiffres. */
 :root {
   /* Le « TH » : noir pur sur fond clair, blanc cassé sur fond sombre.
      Le blanc pur halote sur fond sombre, on ne l'utilise pas. */
@@ -16,8 +17,33 @@
      bordure, puce). Médiane du dégradé calculée en oklch. */
   --th42-orange: #f7ad00;
 
-  /* Orange assombri, seul utilisable pour du TEXTE sur fond blanc :
-     5,27:1 de contraste, conforme WCAG AA. Les trois valeurs ci-dessus
-     sont en dessous de 2:1 et ne doivent jamais porter du texte. */
+  /* Orange assombri, seul utilisable pour du TEXTE sur fond clair :
+     5,27:1 de contraste sur blanc, conforme WCAG AA. Les trois valeurs
+     ci-dessus sont en dessous de 3,1:1 et ne portent jamais de texte
+     sur fond clair. */
   --th42-orange-texte: #ad5200;
+
+  /* --- Fond sombre ------------------------------------------------------
+     Fond de référence #121212 ; plage admise : sombres NEUTRES de #000000
+     à #1a1a1a. Sur fond sombre, l'orange texte est l'aplat de référence
+     (9,75:1 sur #121212) — --th42-orange-texte échoue (3,55:1), il reste
+     réservé au fond clair. Aplat et dégradé sont inchangés sur sombre. */
+  --th42-fond-sombre: #121212;
+  --th42-orange-texte-sombre: #f7ad00;
+
+  /* Registre « attention » sur fond sombre.
+     Fond = color-mix(in srgb, #f7ad00, black 80%) ; texte : 7,97:1. */
+  --th42-attention-fond-sombre: #312300;
+  --th42-attention-texte-sombre: #f7ad00;
+
+  /* --- Gamme d'ambiance -------------------------------------------------
+     Fonds et décor UNIQUEMENT — jamais de texte dans ces couleurs, jamais
+     dans la zone de respiration du logo. Toute couleur d'ambiance vaut
+     color-mix(in srgb, #f7ad00, white P%) avec P entre 35 % et 75 %.
+     Dégradés d'ambiance : 2 stops max pris dans la gamme, angle libre
+     SAUF vertical avec le stop bas plus foncé (réservé au logo).
+     Sur un fond d'ambiance, le texte est en noir de marque. */
+  --th42-ambiance-fonce: #faca59;  /* borne P = 35 % */
+  --th42-ambiance-median: #fbda8c; /* P = 55 % */
+  --th42-ambiance-clair: #fdeabf;  /* borne P = 75 % */
 }

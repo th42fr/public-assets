@@ -1,12 +1,90 @@
 {
-  "noir": { "value": "#000000", "usage": "le « TH » sur fond clair" },
-  "blanc": { "value": "#ededed", "usage": "le « TH » sur fond sombre ; blanc cassé volontaire" },
-  "orangeBas": { "value": "#e17a00", "usage": "bas du dégradé du « 42 »" },
-  "orangeHaut": { "value": "#ffe434", "usage": "haut du dégradé du « 42 »" },
-  "orange": { "value": "#f7ad00", "usage": "aplat de référence quand un dégradé est impossible" },
-  "orangeTexte": { "value": "#ad5200", "usage": "texte sur fond blanc — 5,27:1, WCAG AA" },
+  "$version": "2.1.0",
+  "$commentaire": "Palette de marque TH42. Contrastes mesurés (WCAG 2.1, formule officielle srgb). Les listes usage/interdit sont fermées, pensées pour être vérifiées en CI.",
+  "$seuils": {
+    "texte": "4.5:1 (WCAG AA)",
+    "texteLarge": "3:1 (WCAG AA — corps >= 24 px, ou >= 18,66 px en gras)",
+    "ui": "3:1 (composants d'interface et décor porteur de sens)"
+  },
+  "noir": {
+    "value": "#000000",
+    "usage": ["texte", "fond"],
+    "role": "le « TH » sur fond clair ; seul texte admis sur un fond d'ambiance",
+    "contrastes": { "surBlanc": "21:1", "surAmbianceFonce": "13,66:1", "surAmbianceClair": "17,7:1" }
+  },
+  "blanc": {
+    "value": "#ededed",
+    "usage": ["texte", "fond"],
+    "role": "le « TH » sur fond sombre ; blanc cassé volontaire, le blanc pur halote",
+    "contrastes": { "surFondSombre": "16:1" }
+  },
+  "orangeBas": {
+    "value": "#e17a00",
+    "usage": ["degrade"],
+    "interdit": ["texte", "texteLarge", "info-essentielle"],
+    "role": "bas du dégradé du « 42 » — réservé au dégradé",
+    "contrastes": { "surBlanc": "3,01:1", "surFondSombre": "6,23:1" }
+  },
+  "orangeHaut": {
+    "value": "#ffe434",
+    "usage": ["degrade"],
+    "interdit": ["texte", "texteLarge", "info-essentielle"],
+    "role": "haut du dégradé du « 42 » — réservé au dégradé",
+    "contrastes": { "surBlanc": "1,28:1", "surFondSombre": "14,63:1" }
+  },
+  "orange": {
+    "value": "#f7ad00",
+    "usage": ["fond", "decor"],
+    "interdit": ["texte-sur-fond-clair", "info-essentielle-sur-fond-clair"],
+    "role": "aplat de référence quand un dégradé est impossible ; devient l'orange texte sur fond sombre (voir orangeTexteSombre)",
+    "contrastes": { "surBlanc": "1,92:1", "surFondSombre": "9,75:1" }
+  },
+  "orangeTexte": {
+    "value": "#ad5200",
+    "usage": ["texte"],
+    "interdit": ["texte-sur-fond-sombre", "texte-sur-fond-ambiance"],
+    "role": "seul orange admis pour du texte sur fond clair",
+    "contrastes": { "surBlanc": "5,27:1", "surFondSombre": "3,55:1 (échec AA)", "surAmbianceClair": "4,44:1 (échec AA)" }
+  },
   "degrade": {
     "value": "linear-gradient(0deg, #e17a00 0%, #ffe434 100%)",
-    "usage": "vertical, foncé en bas ; le sens ne s'inverse jamais"
+    "invariant": "vertical, foncé en bas, clair en haut — le sens ne s'inverse jamais, jamais horizontal ni diagonal",
+    "role": "le « 42 » du logo ; inchangé sur fond sombre"
+  },
+  "fondSombre": {
+    "value": "#121212",
+    "usage": ["fond"],
+    "role": "fond sombre de référence ; plage admise : sombres neutres de #000000 à #1a1a1a"
+  },
+  "orangeTexteSombre": {
+    "value": "#f7ad00",
+    "usage": ["texte"],
+    "interdit": ["texte-sur-fond-clair"],
+    "role": "orange texte sur fond sombre — même valeur que l'aplat, aucune couleur nouvelle",
+    "contrastes": { "surFondSombre": "9,75:1", "surNoir": "10,93:1", "surPlafondPlage#1a1a1a": "9,06:1" }
+  },
+  "attentionFondSombre": {
+    "value": "#312300",
+    "usage": ["fond"],
+    "derivation": "color-mix(in srgb, #f7ad00, black 80%)",
+    "role": "fond du registre « attention » en thème sombre"
+  },
+  "attentionTexteSombre": {
+    "value": "#f7ad00",
+    "usage": ["texte"],
+    "role": "texte du registre « attention » en thème sombre",
+    "contrastes": { "surAttentionFondSombre": "7,97:1" }
+  },
+  "ambiance": {
+    "derivation": "color-mix(in srgb, #f7ad00, white P%) avec P entre 35 et 75",
+    "usage": ["fond", "decor"],
+    "interdit": ["texte", "zone-de-respiration-du-logo"],
+    "regleDegrade": "2 stops maximum, pris dans la gamme ; angle libre SAUF vertical avec stop bas plus foncé que le stop haut (réservé au logo)",
+    "regleTexte": "sur un fond d'ambiance, le texte est en noir de marque",
+    "bornes": {
+      "fonce": { "value": "#faca59", "p": 35 },
+      "median": { "value": "#fbda8c", "p": 55 },
+      "clair": { "value": "#fdeabf", "p": 75 }
+    }
   }
 }
