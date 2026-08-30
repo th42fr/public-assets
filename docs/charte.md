@@ -31,6 +31,25 @@ Sur fond blanc, l'orange du « 42 » plafonne à 1,9:1. Il ne porte donc jamais 
 ne sert jamais à distinguer une information essentielle. Pour du texte, `#AD5200` — 5,27:1,
 conforme WCAG AA.
 
+### Sur fond sombre
+
+Fond de référence `#121212` ; plage admise : sombres **neutres** de `#000000` à `#1A1A1A`.
+Sur fond sombre, l'orange texte est l'aplat `#F7AD00` (9,75:1 sur `#121212`, mesuré) —
+`#AD5200` y échoue (3,55:1) et reste réservé au fond clair. L'aplat et le dégradé du
+« 42 » sont inchangés sur fond sombre. Registre « attention » : fond `#312300`, texte
+`#F7AD00` (7,97:1). Les valeurs et les contrastes mesurés sont dans
+[`brand/tokens/`](../brand/tokens/).
+
+### Gamme d'ambiance
+
+Pour les fonds et décors, une gamme dérivée est admise : toute couleur d'ambiance vaut
+`color-mix(in srgb, #F7AD00, white P%)` avec P ∈ [35 %, 75 %] (`#FACA59` → `#FDEABF`).
+Fonds et décor **uniquement** — jamais de texte dans ces couleurs, jamais dans la zone de
+respiration du logo ; sur un fond d'ambiance, le texte est en noir. Dégradés d'ambiance :
+deux stops maximum pris dans la gamme, angle libre **sauf** vertical avec le stop bas plus
+foncé que le stop haut — cette configuration est la signature du logo, elle lui est
+réservée.
+
 ## Ce qu'on ne fait pas
 
 - Recolorer le logo, ou remplacer le dégradé par une autre couleur.
@@ -46,10 +65,17 @@ conforme WCAG AA.
 Réserver autour du logo une marge au moins égale à la **hauteur du « T »**. Rien ne vient
 dans cette zone : ni texte, ni filet, ni bord de page.
 
-## Tailles minimales
+## Tailles : la règle à deux niveaux
 
-| Support | Minimum |
+La marque carrée [`th42-mark.svg`](../brand/logo/th42-mark.svg) est la **variante
+compacte officielle**. Trois bandes, à l'écran :
+
+| Largeur disponible | Forme obligatoire |
 |---|---|
-| Écran | 110 px de large — en dessous, le « 42 » s'efface devant le « TH » |
-| Tampon encreur | 20 mm de large |
-| Favicon | pas de minimum : les fichiers de `favicon/` sont prévus pour, en acceptant qu'à 16 px le logo complet ne soit plus lisible |
+| ≥ 110 px | logo complet — en dessous, le « 42 » s'efface devant le « TH » |
+| 32 à 110 px | marque carrée (navbar, signature, pastille) |
+| < 32 px | fichiers de `favicon/` uniquement, jamais de redimensionnement maison |
+
+Le logo complet ne descend jamais sous 110 px : réduit davantage, il n'est plus le logo.
+
+Hors écran : tampon encreur, 20 mm de large minimum.

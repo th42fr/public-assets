@@ -6,6 +6,25 @@ Les versions sont taguées et servent de point d'épinglage jsDelivr.
 ## [Non publié]
 
 ### Ajouté
+- `brand/tokens/` : doctrine du fond sombre — fond de référence `#121212` (plage admise
+  `#000000` à `#1A1A1A`, neutres), orange texte sur sombre = `#F7AD00` (9,75:1 mesuré ;
+  `#AD5200` reste réservé au fond clair, 3,55:1 sur sombre), registre « attention »
+  (`#312300` / `#F7AD00`, 7,97:1). Contrastes mesurés WCAG 2.1 annotés dans `th42.json`.
+- `brand/tokens/` : gamme d'ambiance pour fonds et décors —
+  `color-mix(in srgb, #F7AD00, white P%)`, P ∈ [35 %, 75 %], bornes `#FACA59` → `#FDEABF` ;
+  jamais de texte dans ces couleurs ; dégradés 2 stops max, angle libre sauf la
+  configuration verticale foncé-en-bas, réservée au logo.
+- `th42.json` : versionné (`$version`), listes fermées `usage`/`interdit` et seuils AA
+  (texte 4,5:1, texte large 3:1) pour vérification en CI par les consommateurs.
+
+### Modifié
+- `docs/charte.md` : la marque carrée `th42-mark.svg` est déclarée **variante compacte
+  officielle** — règle à trois bandes (logo complet ≥ 110 px, marque carrée de 32 à
+  110 px, `favicon/` en dessous) ; sections fond sombre et gamme d'ambiance.
+
+## [2.0.0] — 2026-08-29
+
+### Ajouté
 - Nouvelle génération du logo, en vectoriel : `brand/logo/` — version couleur, fond sombre,
   bascule automatique clair/sombre, monochromes noir et blanc, marque carrée.
 - `brand/tampon/th42-tampon.svg` — version pleine une encre pour tampon encreur.
