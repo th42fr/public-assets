@@ -6,6 +6,18 @@ Les versions sont taguées et servent de point d'épinglage jsDelivr.
 ## [Non publié]
 
 ### Ajouté
+- `brand/logo/lockups/` : les **lockups de sous-marques** — TH42 Labs et TH42 Games,
+  chacun en trois variantes (`th42-<nom>.svg`, `-dark`, `-auto`), mêmes mécanismes de
+  couleur que le logo. Descripteur Chivo Mono 700 vectorisé (aucune fonte à charger),
+  corps 14 % de la largeur du logo, interlettrage 0,30 em, centré sur l'axe optique,
+  à ½ hauteur du « T » sous l'encre. Lockup quasi carré (1,018:1). Liste fermée :
+  une sous-marque existe quand son lockup est publié ici.
+- `docs/declinaisons.md` : guide d'usage des déclinaisons — fichiers, cotes relatives,
+  règle de taille (≥ 110 px, comme le logo), zone de respiration sur le lockup complet.
+
+## [2.1.0] — 2026-08-30
+
+### Ajouté
 - `brand/tokens/` : doctrine du fond sombre — fond de référence `#121212` (plage admise
   `#000000` à `#1A1A1A`, neutres), orange texte sur sombre = `#F7AD00` (9,75:1 mesuré ;
   `#AD5200` reste réservé au fond clair, 3,55:1 sur sombre), registre « attention »
