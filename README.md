@@ -40,6 +40,7 @@ recadre en cercle ou en squircle.
 | Outils qui refusent le SVG (Office, réseaux) | `brand/logo/png/` |
 | Favicon et PWA | `favicon/` |
 | Couleurs de la marque | `brand/tokens/` |
+| Sous-marques (Labs, Games) | `brand/logo/lockups/` — voir [`docs/declinaisons.md`](docs/declinaisons.md) |
 
 Le mode d'emploi détaillé est dans [`docs/integration-web.md`](docs/integration-web.md).
 Les règles de la marque — couleurs, sens du dégradé, ce qu'on ne fait pas — sont dans
