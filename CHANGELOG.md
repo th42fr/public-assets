@@ -10,8 +10,14 @@ Les versions sont taguées et servent de point d'épinglage jsDelivr.
   chacun en trois variantes (`th42-<nom>.svg`, `-dark`, `-auto`), mêmes mécanismes de
   couleur que le logo. Descripteur Chivo Mono 700 vectorisé (aucune fonte à charger),
   corps 14 % de la largeur du logo, interlettrage 0,30 em, centré sur l'axe optique,
-  à ½ hauteur du « T » sous l'encre. Lockup quasi carré (1,018:1). Liste fermée :
+  à 80 % de la hauteur de capitale sous l'encre. Lockup en 1,293:1. Liste fermée :
   une sous-marque existe quand son lockup est publié ici.
+
+### Corrigé
+- `brand/logo/lockups/` : l'écart vertical logo-descripteur, d'abord publié à
+  ½ hauteur du « T » (259 unités — le mot tombait beaucoup trop bas), ramené à
+  80 % de la hauteur de capitale (69,6 unités), conformément aux maquettes
+  validées. Le lockup passe de 889,7 à 700,3 unités de haut.
 - `docs/declinaisons.md` : guide d'usage des déclinaisons — fichiers, cotes relatives,
   règle de taille (≥ 110 px, comme le logo), zone de respiration sur le lockup complet.
 
