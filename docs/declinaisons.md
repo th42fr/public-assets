@@ -27,9 +27,9 @@ Toutes les cotes sont relatives à la largeur **L** du logo :
 | Corps | 14 % de L (plancher 12 % pour les mots longs) |
 | Interlettrage | 0,30 em |
 | Largeur du mot | toujours ≤ ⅔ de L |
-| Position | centré sur l'axe optique du logo, sous l'encre, à ½ hauteur du « T » |
+| Position | centré sur l'axe optique du logo, sous l'encre, à 80 % de la hauteur de capitale du descripteur |
 | Couleur | celle du « TH » du fichier — le descripteur est monochrome |
-| Proportions du lockup | 1,018:1 (quasi carré — 905,5 × 889,7 unités) |
+| Proportions du lockup | 1,293:1 (905,5 × 700,3 unités) |
 
 ## Tailles
 
